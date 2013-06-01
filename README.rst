@@ -16,20 +16,20 @@ Getting Started
 
 We hack on this project in a virtualenv, and you should, too!
 
-  - cd <directory containing this file>
+-   cd <directory containing this file>
 
-  - $venv/bin/python setup.py develop
+-   $venv/bin/python setup.py develop
 
-  - $venv/bin/initialize_EPAUV_db development.ini
+-   $venv/bin/initialize_EPAUV_db development.ini
 
-  - $venv/bin/pserve development.ini
+-   $venv/bin/pserve development.ini
 
 Contributors
 ------------
 
-  - Nate Case
+-   Nate Case
 
-  - Remy DeCausemaker
+-   Remy DeCausemaker
 
-  - David Gay
+-   David Gay
 
