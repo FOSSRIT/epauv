@@ -1,0 +1,11 @@
+1       Green               #008000
+2       LawnGreen           #7CFC00
+3       Yellow              #FFFF00
+4       Gold                #FFD700
+5       Orange              #FFA500
+6       Darkorange          #FF8C00
+7       OrangeRed           #FF4500
+5       Crimson             #DC143C
+9       MediumVioletRed     #C71585
+10      DeepPink            #FF1493
+11+     Aquamarine          #7FFFD4
