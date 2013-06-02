@@ -7,7 +7,9 @@
 <div class="page">
     <div class="grid-100">
         <h2>UV data for ${zipcode}</h2>
-        ##<p>${data}</p>
+		<form id="go-back" action="/">
+			<input type="submit" value="Back" />
+		</form>
     </div>
     <div class="grid-100" id='accordion'>
     % for hour in data:
