@@ -13,6 +13,7 @@ requires = [
     'pygal',
     'pyramid_tm',
     'pyramid_debugtoolbar',
+    'requests',
     'zope.sqlalchemy',
     'waitress',
     ]
