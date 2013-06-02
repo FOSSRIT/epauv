@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="${request.static_url('epauv:static/main.css')}" type="text/css" media="screen" charset="utf-8" />
 	<link rel="stylesheet" href="${request.static_url('epauv:static/unsemantic-grid-responsive.css')}" />
-    <script
-      type="text/javascript"
-      src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">
-    </script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="${request.static_url('epauv:static/js/jquery-ui-1.10.3.custom.js')}"></script>
     <title>EPAUV from FOSS@RIT</title>
   </head>
   <body>

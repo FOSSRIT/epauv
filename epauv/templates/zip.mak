@@ -1,11 +1,15 @@
 <%inherit file="master.mak"/>
+<script>
+  $(function() {
+    $('#accordion').accordion();
+  });
+</script>
 <div class="page">
 	<div class="grid-100">
 		<h2>UV data for ${zipcode}</h2>
-		<p>${data}</p>
+		##<p>${data}</p>
 	</div>
-	<div class="grid-100">
-	<ul style="list-style:none">
+	<div class="grid-100" id='accordion'>
 	% for hour in data:
 		<% 
 			from datetime import datetime
@@ -124,9 +128,8 @@
 		% else:
 			<p>${hour["UV_VALUE"]}</p>
 		% endif
-		##<li>${hour["DATE_TIME"]}:  ${hour["UV_VALUE"]}</li>
+        </div>
 	% endfor
-	</ul>
     
 	<div class="clear spacer"></div>
 	</div>
