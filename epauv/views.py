@@ -13,6 +13,8 @@ from .models import (
     )
 
 from datetime import datetime
+
+import pygal
 import requests
 
 
@@ -37,16 +39,25 @@ def zip(request):
     for item in pulled_json:
         date = datetime.strptime(item['DATE_TIME'], "%b/%d/%Y %I %p")
         data[date.hour] = item['UV_VALUE']
+    # variables used to display current UV data
     uv_this_hour = data[now.hour]
     uv_next_hour = data[now.hour + 1]
+    # colors list for colorization of UV values
     colors = ["color:#006400", "color:#008000", "color:#7CFC00", "color:#FFFF00",
               "color:#FFD700", "color:#FFA500", "color:#FF8C00", "color:#FF4500",
               "color:#DC143C", "color:#C71585", "color:#FF1493", "color:#7FFFD4"]
+    # pygal bar chart for UV data visualization
+    uv_chart = pygal.Bar(width=600, height=400, explicit_size=True, style=pygal.style.LightSolarizedStyle)
+    uv_chart.title = 'UV index over time'
+    uv_chart.x_labels = [str(x) for x in data]
+    uv_chart.add('UV index', [y for y in data.values()])
+    chart = uv_chart.render(is_unicode=True)
     return dict(zipcode=zipcode,
                 data=data,
                 min_uv=min(uv_this_hour, uv_next_hour),
                 max_uv=max(uv_this_hour, uv_next_hour),
-                colors=colors)
+                colors=colors,
+                chart=chart)
 
 
 @view_config(route_name='zip_search')

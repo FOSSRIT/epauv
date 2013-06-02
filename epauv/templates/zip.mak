@@ -11,7 +11,7 @@
 		</form>
         <h2>UV data for ${zipcode}</h2>
     </div>
-    <div class="grid-100">
+    <div class="grid-40">
 	% if len(data) < 1:
 	<p>Sorry, either zip code ${zipcode} does not exist or there is no
 		data for that location at this time.</p>
@@ -25,9 +25,20 @@
 					${min_uv}</strong> and <strong style="${colors[max_uv]}">${max_uv}</strong>.
 			% endif
 			<p style="font-size: 0.6em">Click a time in the list below to get information for that hour.</p>
+			<p style="font-size: 2em; margin-top: -20px">↓</p>
 		</div>
-		
+	</div>
+	<div class="grid-60">
 		<!-- Hourly data -->
+		<div class="graph">
+			${chart | n}
+		</div>
+	</div>
+
+	<div class="clear"></div>
+
+	<div class="grid-100">
+
 		<div id='accordion'>
 		% for hour in data:
 			<% color = colors[data[hour]] %>
