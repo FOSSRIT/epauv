@@ -1,3 +1,4 @@
+0       DarkGreen           #006400
 1       Green               #008000
 2       LawnGreen           #7CFC00
 3       Yellow              #FFFF00
@@ -5,13 +6,14 @@
 5       Orange              #FFA500
 6       Darkorange          #FF8C00
 7       OrangeRed           #FF4500
-5       Crimson             #DC143C
+8       Crimson             #DC143C
 9       MediumVioletRed     #C71585
 10      DeepPink            #FF1493
 11+     Aquamarine          #7FFFD4
 
 
 <2  Minutes to Skin Damage: 60+
+
     You can safely enjoy being outside. Wear sunglasses on bright days. If you
     burn easily, cover up and use sunscreen SPF 30+.
 
