@@ -1,3 +1,7 @@
+from pyramid.httpexceptions import (
+    HTTPFound,
+    HTTPNotFound,
+    )
 from pyramid.response import Response
 from pyramid.view import view_config
 
@@ -25,6 +29,17 @@ def zip(request):
     data = r.json()
     return dict(zipcode=zipcode,
                 data=data)
+
+
+@view_config(route_name='zip_search')
+def zip_search(request):
+    """Redirection view for searching for a zip code."""
+    zipcode = request.params['zipcode']
+    if len(zipcode) == 5:
+        return HTTPFound(location=request.route_url('zip', zipcode=zipcode))
+    else:
+        # Invalid zipcode, go back to home view
+        return HTTPFound(location=request.route_url('home'))
 
 
 conn_err_msg = """\
