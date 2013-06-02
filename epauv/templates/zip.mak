@@ -17,17 +17,17 @@
 		data for that location at this time.</p>
 	% else: 
 		<!-- Data for the current time -->
-		<p>The UV index is currently <strong></strong>.</p>
+		% if min_uv == max_uv:
+		<p>The UV index is currently <strong style="${colors[max_uv]}">${max_uv}</strong>.</p>
+		% else:
+			<p>The UV index is currently between <strong style="${colors[min_uv]}">
+				${min_uv}</strong> and <strong style="${colors[max_uv]}">${max_uv}</strong>.
+		% endif
 		
 		<!-- Hourly data -->
 		<div id='accordion'>
 		% for hour in data:
-			<%
-				colors = ["color:#006400", "color:#008000", "color:#7CFC00", "color:#FFFF00",
-						  "color:#FFD700", "color:#FFA500", "color:#FF8C00", "color:#FF4500",
-						  "color:#DC143C", "color:#C71585", "color:#FF1493", "color:#7FFFD4"]
-				color = colors[data[hour]]
-			%>
+			<% color = colors[data[hour]] %>
 			<h3 style=${color}>${hour}:00 - ${data[hour]}</h3>
 			<div>
 			% if data[hour] in [0,1,2]:

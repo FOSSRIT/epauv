@@ -37,11 +37,16 @@ def zip(request):
     for item in pulled_json:
         date = datetime.strptime(item['DATE_TIME'], "%b/%d/%Y %I %p")
         data[date.hour] = item['UV_VALUE']
-
+    uv_this_hour = data[now.hour]
+    uv_next_hour = data[now.hour + 1]
+    colors = ["color:#006400", "color:#008000", "color:#7CFC00", "color:#FFFF00",
+              "color:#FFD700", "color:#FFA500", "color:#FF8C00", "color:#FF4500",
+              "color:#DC143C", "color:#C71585", "color:#FF1493", "color:#7FFFD4"]
     return dict(zipcode=zipcode,
                 data=data,
-                hour=now.hour,
-                minute=now.minute)
+                min_uv=min(uv_this_hour, uv_next_hour),
+                max_uv=max(uv_this_hour, uv_next_hour),
+                colors=colors)
 
 
 @view_config(route_name='zip_search')
