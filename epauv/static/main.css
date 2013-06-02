@@ -6,3 +6,10 @@ footer {
 body {
     font-family: Cantarell, sans;
 }
+
+#current-data {
+    font-size: 2em;
+    border: 2px solid black;
+    text-align: center;
+    padding: 4px;
+}

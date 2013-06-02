@@ -15,20 +15,23 @@
 	% if len(data) < 1:
 	<p>Sorry, either zip code ${zipcode} does not exist or there is no
 		data for that location at this time.</p>
-	% else: 
+	% else:
 		<!-- Data for the current time -->
-		% if min_uv == max_uv:
-		<p>The UV index is currently <strong style="${colors[max_uv]}">${max_uv}</strong>.</p>
-		% else:
-			<p>The UV index is currently between <strong style="${colors[min_uv]}">
-				${min_uv}</strong> and <strong style="${colors[max_uv]}">${max_uv}</strong>.
-		% endif
+		<div id="current-data">
+			% if min_uv == max_uv:
+			<p>The UV index is currently <strong style="${colors[max_uv]}">${max_uv}</strong>.</p>
+			% else:
+				<p>The UV index is currently between <strong style="${colors[min_uv]}">
+					${min_uv}</strong> and <strong style="${colors[max_uv]}">${max_uv}</strong>.
+			% endif
+			<p style="font-size: 0.6em">Click a time in the list below to get information for that hour.</p>
+		</div>
 		
 		<!-- Hourly data -->
 		<div id='accordion'>
 		% for hour in data:
 			<% color = colors[data[hour]] %>
-			<h3 style=${color}>${hour}:00 - ${data[hour]}</h3>
+			<h3 style=${color}>${hour}:00 -- UV index ${data[hour]}</h3>
 			<div>
 			% if data[hour] in [0,1,2]:
 				<p>Minutes to Skin Damage: <strong style=${color}>60+</strong></p>
