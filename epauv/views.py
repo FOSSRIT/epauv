@@ -12,7 +12,7 @@ from .models import (
     MyModel,
     )
 
-import datetime
+from datetime import datetime
 import requests
 
 
@@ -29,12 +29,18 @@ def zip(request):
     url = 'http://iaspub.epa.gov/enviro/efservice/getEnvirofactsUVHOURLY/ZIP/'\
            + zipcode + '/json'
     r = requests.get(url)
-    data = r.json()
+    pulled_json = r.json()
     # get the current time
-    now = datetime.datetime.now()
+    now = datetime.now()
+    # build data structure {hour: uv-value}
+    data = dict()
+    for item in pulled_json:
+        date = datetime.strptime(item['DATE_TIME'], "%b/%d/%Y %I %p")
+        data[date.hour] = item['UV_VALUE']
+
     return dict(zipcode=zipcode,
                 data=data,
-                hour=now.hour
+                hour=now.hour,
                 minute=now.minute)
 
 
