@@ -9,3 +9,37 @@
 9       MediumVioletRed     #C71585
 10      DeepPink            #FF1493
 11+     Aquamarine          #7FFFD4
+
+
+<2
+    You can safely enjoy being outside. Wear sunglasses on bright days. If you
+    burn easily, cover up and use sunscreen SPF 30+.
+
+    In winter, reflection off snow can nearly double UV strength. 
+
+3-5
+    Take precautions if you will be outside, such as wearing a hat and
+    sunglasses and using sunscreen SPF 30+. Reduce your exposure to the sun's
+    most intense UV radiation by seeking shade during midday hours.
+
+6-7
+    Protection against sun damage is needed. Wear a wide-brimmed hat and
+    sunglasses, use sunscreen SPF 30+ and wear a long-sleeved shirt and pants
+    when practical. Reduce your exposure to the sun's most intense UV radiation
+    by seeking shade during midday hours.
+
+8-10
+    Protection against sun damage is needed. If you need to be outside during
+    midday hours between 10 a.m. and 4 p.m., take steps to reduce sun exposure.
+    A shirt, hat and sunscreen are a must, and be sure you seek shade.
+
+    Beachgoers should know that white sand and other bright surfaces reflect UV
+    and can double UV exposure. 
+
+11+
+    Protection against sun damage is needed. If you need to be outside during
+    midday hours between 10 a.m. and 4 p.m., take steps to reduce sun exposure.
+    A shirt, hat and sunscreen are a must, and be sure you seek shade.
+
+    Beachgoers should know that white sand and other bright surfaces reflect UV
+    and can double UV exposure. 
