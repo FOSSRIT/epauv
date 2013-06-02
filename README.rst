@@ -16,6 +16,9 @@ Getting Started
 
 We hack on this project in a virtualenv, and you should, too!
 
+EPAUV requires that you have the ``python-lxml`` package installed.
+This is used by pygal to generate coolio SVG diagrams.
+
 -   cd <directory containing this file>
 
 -   $venv/bin/python setup.py develop
