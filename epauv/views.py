@@ -12,6 +12,7 @@ from .models import (
     MyModel,
     )
 
+import datetime
 import requests
 
 
@@ -22,13 +23,19 @@ def home(request):
 
 @view_config(route_name='zip', renderer='zip.mak')
 def zip(request):
+    # get the zipcode from the URL
     zipcode = request.matchdict.get('zipcode')
+    # get the JSON from the EPA API
     url = 'http://iaspub.epa.gov/enviro/efservice/getEnvirofactsUVHOURLY/ZIP/'\
            + zipcode + '/json'
     r = requests.get(url)
     data = r.json()
+    # get the current time
+    now = datetime.datetime.now()
     return dict(zipcode=zipcode,
-                data=data)
+                data=data,
+                hour=now.hour
+                minute=now.minute)
 
 
 @view_config(route_name='zip_search')

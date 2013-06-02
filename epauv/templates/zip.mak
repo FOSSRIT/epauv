@@ -16,6 +16,10 @@
 	<p>Sorry, either zip code ${zipcode} does not exist or there is no
 		data for that location at this time.</p>
 	% else: 
+		<!-- Data for the current time -->
+		<p>The UV index is currently <strong></strong>.</p>
+		
+		<!-- Hourly data -->
 		% for hour in data:
 			<%
 				from datetime import datetime
@@ -76,4 +80,5 @@
 	% endif
     
     <div class="clear spacer"></div>
+    </div>
     </div>
