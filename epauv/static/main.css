@@ -13,6 +13,14 @@ body {
     padding: 4px;
 }
 
+#zipcode-form {
+    text-align: center;
+}
+
+#zipcode-form, #zipcode-form input {
+    font-size: 20px;
+}
+
 /* I set width to 600px in a sort of janky way, 'cause I know
  * that the chart will be 600px and I just can't quite nail
  * the centering the way I want to right now. This will center
