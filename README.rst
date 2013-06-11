@@ -13,19 +13,19 @@ attractive, interesting interface to this data.
    :align: center
 
 
-.. image:: /epauv/static/images/results-desktop.png
+.. image:: /epauv/static/images/result-desktop.png
    :height: 100px
    :width: 200 px
    :align: center
 
 
-.. image:: /epauv/static/images/results-mobile.png
+.. image:: /epauv/static/images/result-mobile.png
    :height: 100px
    :width: 200 px
    :align: center
 
 
-.. image:: /epauv/static/images/results-list.png
+.. image:: /epauv/static/images/result-list.png
    :height: 100px
    :width: 200 px
    :align: center
