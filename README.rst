@@ -7,9 +7,29 @@ UV index data provided by the Environmental Protection Agency to create an
 attractive, interesting interface to this data.
 
 .. image:: epauv/static/images/zipform.png
+   :height: 100px
+   :width: 200 px
+   :scale: 50 %
+   :alt: alternate text
+   :align: center
 .. image:: epauv/static/images/results-desktop.png
+   :height: 100px
+   :width: 200 px
+   :scale: 50 %
+   :alt: alternate text
+   :align: center
 .. image:: epauv/static/images/results-mobile.png
+   :height: 100px
+   :width: 200 px
+   :scale: 50 %
+   :alt: alternate text
+   :align: center
 .. image:: epauv/static/images/results-list.png
+   :height: 100px
+   :width: 200 px
+   :scale: 50 %
+   :alt: alternate text
+   :align: center
 
 
 License
