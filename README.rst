@@ -12,15 +12,18 @@ attractive, interesting interface to this data.
    :width: 200 px
    :align: center
 
+
 .. image:: /epauv/static/images/results-desktop.png
    :height: 100px
    :width: 200 px
    :align: center
 
+
 .. image:: /epauv/static/images/results-mobile.png
    :height: 100px
    :width: 200 px
    :align: center
+
 
 .. image:: /epauv/static/images/results-list.png
    :height: 100px
