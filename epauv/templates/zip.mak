@@ -42,7 +42,7 @@
 		<div id='accordion'>
 		% for hour in data:
 			<% color = colors[data[hour]] %>
-			<h3 style=${color}>${hour}:00 -- UV index ${data[hour]}</h3>
+			<h3 class="hand-cursor" style=${color}>${hour}:00 -- UV index ${data[hour]}</h3>
 			<div>
 			% if data[hour] in [0,1,2]:
 				<p>Minutes to Skin Damage: <strong style=${color}>60+</strong></p>
