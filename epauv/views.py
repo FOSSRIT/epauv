@@ -36,9 +36,11 @@ def zip(request):
     now = datetime.now()
     # build data structure {hour: uv-value}
     data = dict()
+    order = dict()
     for item in pulled_json:
         date = datetime.strptime(item['DATE_TIME'], "%b/%d/%Y %I %p")
         data[date.hour] = item['UV_VALUE']
+        order[item['ORDER']] = date.hour
     # variables used to display current UV data
     uv_this_hour = data[now.hour]
     uv_next_hour = data[now.hour + 1]
@@ -49,11 +51,12 @@ def zip(request):
     # pygal bar chart for UV data visualization
     uv_chart = pygal.Bar(width=600, height=400, explicit_size=True, style=pygal.style.LightSolarizedStyle)
     uv_chart.title = 'UV index over time'
-    uv_chart.x_labels = [str(x) for x in data]
-    uv_chart.add('UV index', [y for y in data.values()])
+    uv_chart.x_labels = [str(y[1]) for y in sorted(order.items())]
+    uv_chart.add('UV index', [data[y[1]] for y in sorted(order.items())])
     chart = uv_chart.render(is_unicode=True)
     return dict(zipcode=zipcode,
                 data=data,
+                order=order,
                 min_uv=min(uv_this_hour, uv_next_hour),
                 max_uv=max(uv_this_hour, uv_next_hour),
                 colors=colors,

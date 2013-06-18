@@ -40,7 +40,7 @@
 	<div class="grid-100">
 
 		<div id='accordion'>
-		% for hour in data:
+		% for index, hour in sorted(order.items()):
 			<% color = colors[data[hour]] %>
 			<h3 class="hand-cursor" style=${color}>${hour}:00 -- UV index ${data[hour]}</h3>
 			<div>
